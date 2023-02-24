@@ -6,13 +6,13 @@
         '"files" is just that same array
         'files are saved inside of the same directory structure they were inside "root" but in the same folder as the program is executed
 
-        Dim root As String = "C:\Users\elemer\Desktop\Trashy boy"
+        Dim root As String = "C:\Users\elemer"
         Dim n As Integer = root.Length
         Dim path As String = "C:\Users\elemer\Desktop\save.json"
         Dim files As Object = Newtonsoft.Json.JsonConvert.DeserializeObject(System.IO.File.ReadAllText(path))
 
-        Dim newpath As String = ""
-        Dim newdir As String = ""
+        Dim newpath As String
+        Dim newdir As String
 
         For Each file As String In files
 
